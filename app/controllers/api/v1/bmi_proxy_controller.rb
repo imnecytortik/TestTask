@@ -3,16 +3,17 @@ module Api
     class BmiProxyController < ApplicationController
       include HTTParty
 
-      def create
-        height = params.require(:height).to_f
-        weight = params.require(:weight).to_f
+      before_action :set_patient
 
-        height_m = height / 100.0
+      # GET /api/v1/patients/:patient_id/bmi
+      def show
+        weight = @patient.weight.to_f
+        height_m = (@patient.height.to_f / 100.0).round(2)
 
         api_url = ENV.fetch("BMI_API_URL", "https://bmicalculatorapi.vercel.app/api/bmi")
-        url = "#{api_url}/#{weight}/#{height_m.round(2)}"
+        url = "#{api_url}/#{weight}/#{height_m}"
 
-        p url
+        p url  # для отладки
 
         response = HTTParty.get(url)
 
@@ -21,6 +22,14 @@ module Api
         else
           render json: { error: "BMI service error" }, status: :bad_gateway
         end
+      end
+
+      private
+
+      def set_patient
+        @patient = Patient.find(params[:patient_id])
+      rescue ActiveRecord::RecordNotFound
+        render json: { error: "Patient not found" }, status: :not_found
       end
     end
   end

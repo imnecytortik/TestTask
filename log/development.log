@@ -354,3 +354,550 @@ Processing by Api::V1::BmiProxyController#create as */*
 Completed 200 OK in 320ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1838)
 
 
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "patients_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "patients_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/v1/patients" for 172.19.0.1 at 2025-09-27 22:05:13 +0000
+Processing by Api::V1::PatientsController#index as HTML
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.0ms | Allocations: 24237)
+
+
+  
+ActionController::UnfilteredParameters (unable to convert unpermitted parameters to hash):
+  
+app/controllers/api/v1/patients_controller.rb:68:in `merge'
+app/controllers/api/v1/patients_controller.rb:68:in `ransack_params'
+app/controllers/api/v1/patients_controller.rb:7:in `index'
+Started GET "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:06:44 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/patients/1/bmi"):
+  
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "patients_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "patients_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "patients_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "patients_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:08:44 +0000
+Started GET "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:08:44 +0000
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::BmiProxyController):
+  
+actionpack (7.1.5.2) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.5.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.5.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.5.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.2.1) lib/rack/etag.rb:29:in `call'
+rack (3.2.1) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.1) lib/rack/head.rb:15:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.5.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.5.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.5.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:139:in `block in tagged'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:139:in `tagged'
+activesupport (7.1.5.2) lib/active_support/broadcast_logger.rb:241:in `method_missing'
+railties (7.1.5.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.5.2) lib/rails/engine.rb:536:in `call'
+puma (7.0.4) lib/puma/configuration.rb:299:in `call'
+puma (7.0.4) lib/puma/request.rb:101:in `block in handle_request'
+puma (7.0.4) lib/puma/thread_pool.rb:346:in `with_force_shutdown'
+puma (7.0.4) lib/puma/request.rb:100:in `handle_request'
+puma (7.0.4) lib/puma/server.rb:506:in `process_client'
+puma (7.0.4) lib/puma/server.rb:265:in `block in run'
+puma (7.0.4) lib/puma/thread_pool.rb:173:in `block in spawn_thread'
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::BmiProxyController):
+  
+actionpack (7.1.5.2) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.5.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.5.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.5.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.2.1) lib/rack/etag.rb:29:in `call'
+rack (3.2.1) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.1) lib/rack/head.rb:15:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.5.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.5.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.5.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:139:in `block in tagged'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:139:in `tagged'
+activesupport (7.1.5.2) lib/active_support/broadcast_logger.rb:241:in `method_missing'
+railties (7.1.5.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.5.2) lib/rails/engine.rb:536:in `call'
+puma (7.0.4) lib/puma/configuration.rb:299:in `call'
+puma (7.0.4) lib/puma/request.rb:101:in `block in handle_request'
+puma (7.0.4) lib/puma/thread_pool.rb:346:in `with_force_shutdown'
+puma (7.0.4) lib/puma/request.rb:100:in `handle_request'
+puma (7.0.4) lib/puma/server.rb:506:in `process_client'
+puma (7.0.4) lib/puma/server.rb:265:in `block in run'
+puma (7.0.4) lib/puma/thread_pool.rb:173:in `block in spawn_thread'
+Started GET "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:08:46 +0000
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::BmiProxyController):
+  
+actionpack (7.1.5.2) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.5.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.5.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.5.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.2.1) lib/rack/etag.rb:29:in `call'
+rack (3.2.1) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.1) lib/rack/head.rb:15:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.5.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.5.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.5.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:139:in `block in tagged'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:139:in `tagged'
+activesupport (7.1.5.2) lib/active_support/broadcast_logger.rb:241:in `method_missing'
+railties (7.1.5.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.5.2) lib/rails/engine.rb:536:in `call'
+puma (7.0.4) lib/puma/configuration.rb:299:in `call'
+puma (7.0.4) lib/puma/request.rb:101:in `block in handle_request'
+puma (7.0.4) lib/puma/thread_pool.rb:346:in `with_force_shutdown'
+puma (7.0.4) lib/puma/request.rb:100:in `handle_request'
+puma (7.0.4) lib/puma/server.rb:506:in `process_client'
+puma (7.0.4) lib/puma/server.rb:265:in `block in run'
+puma (7.0.4) lib/puma/thread_pool.rb:173:in `block in spawn_thread'
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "patients_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "patients_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "patients_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "patients_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE "patients_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "patients_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:12:45 +0000
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::BmiProxyController):
+  
+actionpack (7.1.5.2) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.5.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.5.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.5.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.2.1) lib/rack/etag.rb:29:in `call'
+rack (3.2.1) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.1) lib/rack/head.rb:15:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.5.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.5.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.5.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:139:in `block in tagged'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:139:in `tagged'
+activesupport (7.1.5.2) lib/active_support/broadcast_logger.rb:241:in `method_missing'
+railties (7.1.5.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.5.2) lib/rails/engine.rb:536:in `call'
+puma (7.0.4) lib/puma/configuration.rb:299:in `call'
+puma (7.0.4) lib/puma/request.rb:101:in `block in handle_request'
+puma (7.0.4) lib/puma/thread_pool.rb:346:in `with_force_shutdown'
+puma (7.0.4) lib/puma/request.rb:100:in `handle_request'
+puma (7.0.4) lib/puma/server.rb:506:in `process_client'
+puma (7.0.4) lib/puma/server.rb:265:in `block in run'
+puma (7.0.4) lib/puma/thread_pool.rb:173:in `block in spawn_thread'
+Started GET "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:12:46 +0000
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::BmiProxyController):
+  
+actionpack (7.1.5.2) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.5.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.5.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.5.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.2.1) lib/rack/etag.rb:29:in `call'
+rack (3.2.1) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.1) lib/rack/head.rb:15:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.5.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.5.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.5.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:139:in `block in tagged'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:139:in `tagged'
+activesupport (7.1.5.2) lib/active_support/broadcast_logger.rb:241:in `method_missing'
+railties (7.1.5.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.5.2) lib/rails/engine.rb:536:in `call'
+puma (7.0.4) lib/puma/configuration.rb:299:in `call'
+puma (7.0.4) lib/puma/request.rb:101:in `block in handle_request'
+puma (7.0.4) lib/puma/thread_pool.rb:346:in `with_force_shutdown'
+puma (7.0.4) lib/puma/request.rb:100:in `handle_request'
+puma (7.0.4) lib/puma/server.rb:506:in `process_client'
+puma (7.0.4) lib/puma/server.rb:265:in `block in run'
+puma (7.0.4) lib/puma/thread_pool.rb:173:in `block in spawn_thread'
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "patients_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "patients_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:15:42 +0000
+Processing by Api::V1::BmiProxyController#show as HTML
+  Parameters: {"patient_id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :set_patient rendered or redirected
+Completed 404 Not Found in 141ms (Views: 1.6ms | ActiveRecord: 11.7ms | Allocations: 37429)
+
+
+Started GET "/favicon.ico" for 172.19.0.1 at 2025-09-27 22:15:42 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/api/v1/doctors" for 172.19.0.1 at 2025-09-27 22:16:12 +0000
+Processing by Api::V1::DoctorsController#create as */*
+  Parameters: {"doctor"=>{"first_name"=>"Иван", "last_name"=>"Петров", "middle_name"=>"Сергеевич"}}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDoctor Create (2.6ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "middle_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Иван"], ["last_name", "Петров"], ["middle_name", "Сергеевич"], ["created_at", "2025-09-27 22:16:12.812901"], ["updated_at", "2025-09-27 22:16:12.812901"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Doctor (0.43ms)
+Completed 201 Created in 49ms (Views: 2.0ms | ActiveRecord: 18.7ms | Allocations: 7332)
+
+
+Started POST "/api/v1/doctors" for 172.19.0.1 at 2025-09-27 22:16:14 +0000
+Processing by Api::V1::DoctorsController#create as */*
+  Parameters: {"doctor"=>{"first_name"=>"Иван", "last_name"=>"Петров", "middle_name"=>"Сергеевич"}}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDoctor Create (5.8ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "middle_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Иван"], ["last_name", "Петров"], ["middle_name", "Сергеевич"], ["created_at", "2025-09-27 22:16:14.981802"], ["updated_at", "2025-09-27 22:16:14.981802"]]
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Doctor (0.47ms)
+Completed 201 Created in 23ms (Views: 2.0ms | ActiveRecord: 11.1ms | Allocations: 667)
+
+
+Started POST "/api/v1/patients" for 172.19.0.1 at 2025-09-27 22:16:22 +0000
+Processing by Api::V1::PatientsController#create as */*
+  Parameters: {"patient"=>{"first_name"=>"Мария", "last_name"=>"Иванова", "middle_name"=>"Александровна", "birthday"=>"1990-05-15", "gender"=>"female", "height"=>165, "weight"=>60.5}, "doctor_ids"=>[1, 2]}
+  [1m[36mDoctor Load (0.7ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."first_name" = $1 AND "patients"."last_name" = $2 AND "patients"."middle_name" = $3 AND "patients"."birthday" = $4 LIMIT $5[0m  [["first_name", "Мария"], ["last_name", "Иванова"], ["middle_name", "Александровна"], ["birthday", "1990-05-15"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.7ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "middle_name", "birthday", "gender", "height", "weight", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Мария"], ["last_name", "Иванова"], ["middle_name", "Александровна"], ["birthday", "1990-05-15"], ["gender", "female"], ["height", 165], ["weight", "60.5"], ["created_at", "2025-09-27 22:16:22.286493"], ["updated_at", "2025-09-27 22:16:22.286493"]]
+  [1m[36mPatient::HABTM_Doctors Create (1.0ms)[0m  [1m[32mINSERT INTO "doctors_patients" ("doctor_id", "patient_id") VALUES ($1, $2)[0m  [["doctor_id", 1], ["patient_id", 1]]
+  [1m[36mPatient::HABTM_Doctors Create (0.4ms)[0m  [1m[32mINSERT INTO "doctors_patients" ("doctor_id", "patient_id") VALUES ($1, $2)[0m  [["doctor_id", 2], ["patient_id", 1]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Patient (0.3ms)
+Completed 201 Created in 69ms (Views: 1.0ms | ActiveRecord: 8.2ms | Allocations: 16842)
+
+
+Started POST "/api/v1/patients/1/bmr" for 172.19.0.1 at 2025-09-27 22:16:30 +0000
+  
+Zeitwerk::NameError (expected file /usr/src/app/app/controllers/api/v1/bmrs_controller.rb to define constant Api::V1::BmrsController, but didn't):
+  
+zeitwerk (2.6.18) lib/zeitwerk/loader/callbacks.rb:32:in `on_file_autoloaded'
+zeitwerk (2.6.18) lib/zeitwerk/kernel.rb:27:in `require'
+activesupport (7.1.5.2) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (7.1.5.2) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (7.1.5.2) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.1.5.2) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.1.5.2) lib/action_dispatch/request/utils.rb:100:in `action_encoding_template'
+actionpack (7.1.5.2) lib/action_dispatch/request/utils.rb:85:in `encode'
+actionpack (7.1.5.2) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.1.5.2) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.5.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.5.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.2.1) lib/rack/etag.rb:29:in `call'
+rack (3.2.1) lib/rack/conditional_get.rb:44:in `call'
+rack (3.2.1) lib/rack/head.rb:15:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.5.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.5.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.5.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:139:in `block in tagged'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.5.2) lib/active_support/tagged_logging.rb:139:in `tagged'
+activesupport (7.1.5.2) lib/active_support/broadcast_logger.rb:241:in `method_missing'
+railties (7.1.5.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.5.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.5.2) lib/rails/engine.rb:536:in `call'
+puma (7.0.4) lib/puma/configuration.rb:299:in `call'
+puma (7.0.4) lib/puma/request.rb:101:in `block in handle_request'
+puma (7.0.4) lib/puma/thread_pool.rb:346:in `with_force_shutdown'
+puma (7.0.4) lib/puma/request.rb:100:in `handle_request'
+puma (7.0.4) lib/puma/server.rb:506:in `process_client'
+puma (7.0.4) lib/puma/server.rb:265:in `block in run'
+puma (7.0.4) lib/puma/thread_pool.rb:173:in `block in spawn_thread'
+Started POST "/api/v1/patients/1/bmr" for 172.19.0.1 at 2025-09-27 22:16:41 +0000
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BmrsController):
+  
+Started POST "/api/v1/bmi" for 172.19.0.1 at 2025-09-27 22:16:50 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/bmi"):
+  
+Started GET "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:16:58 +0000
+Processing by Api::V1::BmiProxyController#show as HTML
+  Parameters: {"patient_id"=>"1"}
+  [1m[36mPatient Load (1.2ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 348ms (Views: 0.6ms | ActiveRecord: 1.1ms | Allocations: 1540)
+
+
+Started GET "/favicon.ico" for 172.19.0.1 at 2025-09-27 22:16:59 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/patients/1/bmr" for 172.19.0.1 at 2025-09-27 22:17:15 +0000
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BmrsController):
+  
+Started GET "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:17:24 +0000
+Processing by Api::V1::BmiProxyController#show as HTML
+  Parameters: {"patient_id"=>"1"}
+  [1m[36mPatient Load (1.0ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.3ms)
+Completed 200 OK in 244ms (Views: 2.0ms | ActiveRecord: 1.0ms | Allocations: 941)
+
+
+Started GET "/favicon.ico" for 172.19.0.1 at 2025-09-27 22:17:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/api/v1/patients/1/bmr" for 172.19.0.1 at 2025-09-27 22:17:43 +0000
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BmrsController):
+  
+Started POST "/api/v1/patients/1/bmr" for 172.19.0.1 at 2025-09-27 22:17:50 +0000
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BmrsController):
+  
+Started POST "/api/v1/patients/1/bmr" for 172.19.0.1 at 2025-09-27 22:17:54 +0000
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BmrsController):
+  
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "patients_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "patients_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2824508713068005460)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/v1/patients/1/bmr" for 172.19.0.1 at 2025-09-27 22:20:14 +0000
+Processing by Api::V1::BmrsController#create as */*
+  Parameters: {"formula"=>"harris", "patient_id"=>"1", "bmr"=>{"formula"=>"harris"}}
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBmrResult Create (1.4ms)[0m  [1m[32mINSERT INTO "bmr_results" ("patient_id", "formula", "value", "metadata", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["patient_id", 1], ["formula", "harris"], ["value", "1366.66"], ["metadata", "{\"weight\":\"60.5\",\"height\":165}"], ["created_at", "2025-09-27 22:20:14.593768"], ["updated_at", "2025-09-27 22:20:14.593768"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 177ms (Views: 2.5ms | ActiveRecord: 19.6ms | Allocations: 56668)
+
+
+Started POST "/api/v1/patients/1/bmr" for 172.19.0.1 at 2025-09-27 22:20:19 +0000
+Processing by Api::V1::BmrsController#create as */*
+  Parameters: {"formula"=>"mifflin", "patient_id"=>"1", "bmr"=>{"formula"=>"mifflin"}}
+  [1m[36mPatient Load (1.2ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBmrResult Create (2.0ms)[0m  [1m[32mINSERT INTO "bmr_results" ("patient_id", "formula", "value", "metadata", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["patient_id", 1], ["formula", "mifflin"], ["value", "1300.25"], ["metadata", "{\"weight\":\"60.5\",\"height\":165}"], ["created_at", "2025-09-27 22:20:19.093258"], ["updated_at", "2025-09-27 22:20:19.093258"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 20ms (Views: 0.9ms | ActiveRecord: 6.4ms | Allocations: 1065)
+
+
+Started POST "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:20:38 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/patients/1/bmi"):
+  
+Started POST "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:20:39 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/patients/1/bmi"):
+  
+Started GET "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:20:48 +0000
+Processing by Api::V1::BmiProxyController#show as HTML
+  Parameters: {"patient_id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 290ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1597)
+
+
+Started GET "/favicon.ico" for 172.19.0.1 at 2025-09-27 22:20:48 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/patients/1/bmi" for 172.19.0.1 at 2025-09-27 22:20:59 +0000
+Processing by Api::V1::BmiProxyController#show as */*
+  Parameters: {"patient_id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 391ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 940)
+
+

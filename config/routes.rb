@@ -4,8 +4,8 @@ Rails.application.routes.draw do
       resources :doctors, only: %i[index show create update destroy]
       resources :patients, only: %i[index show create update destroy] do
         resources :bmr, only: %i[index create], controller: "bmrs"
+        get 'bmi', to: 'bmi_proxy#show'
       end
-      post "/bmi", to: "bmi_proxy#create"
     end
   end
 end
